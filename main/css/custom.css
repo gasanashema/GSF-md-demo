@@ -1,0 +1,39 @@
+#treatments-chart{
+    height: 291px;
+}
+
+.demo-panel-bx{
+    height: 260px;
+}
+.success-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 63px;
+}
+
+@media only screen and (max-width: 1366px) {
+    #treatments-chart{
+        height: 276px;
+    }
+}
+
+.apexcharts-legend-series{
+    margin: 0px 8px 0px 0px !important;
+}
+.apexcharts-legend-text{
+    top: -1px;
+}
+
+
+#calendar .fc-daygrid-dot-event .fc-event-title {
+    font-weight: 400 !important;
+    flex-grow: 0 !important;
+}
+#calendar  .fc-event-time{
+    display: none !important;
+}
+
+
