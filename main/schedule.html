@@ -239,142 +239,86 @@
         </aside>
 
         <!-- Content Wrapper. Contains page content -->
+
 <div class="content-wrapper">
     <div class="container-full">
+        <!-- Content Header (Page header) -->
+        <!-- <div class="content-header">
+			<div class="d-flex align-items-center">
+				<div class="me-auto">
+					<h4 class="page-title">Calendar</h4>
+					<div class="d-inline-block align-items-center">
+						<nav>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+								<li class="breadcrumb-item" aria-current="page">Dashboard</li>
+								<li class="breadcrumb-item active" aria-current="page">Calendar</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				
+			</div>
+		</div> -->
+
         <!-- Main content -->
         <section class="content">
             <div class="row">
-                <div class="col-12">
-
+                <div class="col-xl-9 col-lg-8 col-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h4 class="box-title">Gifts</h4>
+                            <h4 class="box-title">Schedule</h4>
                         </div>
-                        <!-- /.box-header -->
                         <div class="box-body">
-                            <div class="mb-25">
-                                <div>
-                                    <button type="button" class="btn btn-primary btn-md" data-bs-toggle="modal"
-                                        data-bs-target="#modal-center"> Add child</button>
-                                </div>
-                                <!-- Modal -->
-                                <div class="modal center-modal fade" id="modal-center" tabindex="-1">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Add Appointment</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="form-group">
-                                                    <label class="form-label">child Name</label>
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Enter full name">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="form-label">Gender</label>
-                                                    <div class="d-flex">
-                                                        <div class="radio me-15">
-                                                            <input name="group1" type="radio" id="Option_1" checked="">
-                                                            <label for="Option_1">Male</label>
-                                                        </div>
-                                                        <div class="radio">
-                                                            <input name="group1" type="radio" id="Option_2">
-                                                            <label for="Option_2">Female</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="example-number-input" class="form-label">Age</label>
-                                                    <input class="form-control" type="number" value="42"
-                                                        id="example-number-input">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="example-datetime-local-input"
-                                                        class="form-label">Time</label>
-                                                    <input class="form-control" type="datetime-local"
-                                                        value="2011-08-19T13:45:00" id="example-datetime-local-input">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="form-label">gift received</label>
-                                                    <select class="form-select">
-                                                        <option>clothes</option>
-                                                        <option>shoes</option>
-                                                        <option>books</option>
-                                                        <option>bags</option>
-                                                        <option>other</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="form-label">total amount spent</label>
-                                                    <textarea rows="3" class="form-control"
-                                                        placeholder="Add Message"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer modal-footer-uniform">
-                                                <button type="button" class="btn btn-danger"
-                                                    data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary float-end"
-                                                    data-bs-dismiss="modal">Save</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.modal -->
+                            <div id="calendar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-12">
+                    <div class="box no-border no-shadow">
+                        <div class="box-header with-border">
+                            <h4 class="box-title">Draggable Events</h4>
+                        </div>
+                        <div class="box-body p-0">
+                            <!-- the events -->
+                            <div id="external-events">
+                                <div class="external-event m-15 bg-primary" data-class="bg-primary"><i
+                                        class="fa fa-hand-o-right"></i>Lunch</div>
+                                <div class="external-event m-15 bg-warning" data-class="bg-warning"><i
+                                        class="fa fa-hand-o-right"></i>Go home</div>
+                                <div class="external-event m-15 bg-info" data-class="bg-info"><i
+                                        class="fa fa-hand-o-right"></i>Do homework</div>
+                                <div class="external-event m-15 bg-success" data-class="bg-success"><i
+                                        class="fa fa-hand-o-right"></i>Work on UI design</div>
+                                <div class="external-event m-15 bg-danger" data-class="bg-danger"><i
+                                        class="fa fa-hand-o-right"></i>Sleep tight</div>
                             </div>
-                            <div class="table-responsive">
-                                <table id="example5" class="table table-bordered text-nowrap" style="width:100%">
-                                    <thead>
-                                        <tr>
-                                            <th class="pe-30 pe-md-100">child Name</th>
-                                            <th>Gender</th>
-                                            <th>Age</th>
-                                            <th>Time</th>
-                                            <th>gift received</th>
-                                            <th>Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>princess</td>
-                                            <td>Female</td>
-                                            <td>10</td>
-                                            <td>Today, 9:45 AM</td>
-                                            <td>shoes</td>
-                                            <td class="text-success">Confirmed</td>
-                                        </tr>
-                                        <tr>
-                                            <td>prince</td>
-                                            <td>male</td>
-                                            <td>8</td>
-                                            <td>Today, 11:00 AM</td>
-                                            <td>books</td>
-                                            <td class="text-danger">pending</td>
-                                        </tr>
-
-                                    </tbody>
-                                    <tfoot class="d-none">
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                        </tr>
-                                    </tfoot>
-                                </table>
+                            <div class="event-fc-bt mx-15 my-20">
+                                <!-- checkbox -->
+                                <div class="checkbox">
+                                    <input id="drop-remove" type="checkbox">
+                                    <label for="drop-remove">
+                                        Remove after drop
+                                    </label>
+                                </div>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#add-new-events"
+                                    class="btn btn-success w-p100 my-10">
+                                    <i class="ti-plus"></i> Add New Event
+                                </a>
+                                <div class="d-grid">
+                                    <button class="btn btn-danger" id="btn-new-event">Create New Event</button>
+                                </div>
                             </div>
                         </div>
-                        <!-- /.box-body -->
                     </div>
-                    <!-- /.box -->
                 </div>
             </div>
         </section>
         <!-- /.content -->
     </div>
-</div>        <!-- /.content-wrapper -->
+
+</div>
+        <!-- /.content-wrapper -->
         <footer class="main-footer">
             <div class="pull-right d-none d-sm-inline-block">
                 <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
